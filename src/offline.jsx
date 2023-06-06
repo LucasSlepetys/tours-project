@@ -39,7 +39,7 @@ const tours = [
 
   {
     id: 'receAEzz86KzW2gvH',
-    name: 'Best of Poland in 10 Days Tour',
+    name: 'What a weather',
     info: "Get ready for a series of exhilarating pool adventures in Mallorca, where the sun-kissed island and the amazing weather combine to create a paradise for water lovers! As we step into the inviting pool area, the warm Mediterranean sun caresses our skin, filling us with a sense of excitement and anticipation. The crystal-clear water beckons us to dive in, and with a splash, we immerse ourselves in its refreshing embrace. Laughter fills the air as we swim, play water volleyball, and challenge each other to friendly races. The poolside is lined with comfortable loungers, where we bask in the glorious sunshine, sipping on refreshing cocktails and indulging in tropical fruits. The panoramic views of the island's breathtaking landscapes serve as a stunning backdrop, reminding us of the natural beauty that surrounds us.  ",
     image: tour5,
     price: 'FREE',
