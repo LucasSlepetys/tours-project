@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import toursList from './offline';
+import Tour from './Tour';
 
 const Tours = () => {
   const [tours, setTours] = useState(toursList);
@@ -10,6 +11,7 @@ const Tours = () => {
   }, [refresh]);
 
   function removeTour(id) {
+    console.log(id);
     setTours(tours.filter((tour) => tour.id !== id));
   }
 
@@ -27,40 +29,20 @@ const Tours = () => {
 
   return (
     <div>
-      <h1 className='title title-underline '>Tours</h1>
+      <h1 className='title'>Mallorca</h1>
+      <div className=' title-underline '></div>
 
       <div className='tours'>
         {tours.map((tour) => {
-          const { id, price, image, name, info } = tour;
-
           return (
-            <div key={id} className='single-tour'>
-              <div className='tour-price'>{price}</div>
-              <img className='img' src={image} alt={name} />
-              <div className='tour-info'>
-                <h5>{name}</h5>
-                <p>{<InfoSection infomation={info} />}</p>
-              </div>
-
-              <button
-                type='button'
-                onClick={() => removeTour(id)}
-                className='info-btn btn'
-              >
-                Not interested
-              </button>
+            <div key={tour.id} className='single-tour'>
+              <Tour {...tour} removeTour={removeTour} />
             </div>
           );
         })}
       </div>
     </div>
   );
-
-  function InfoSection({ infomation }) {
-    const [info, setInfo] = useState(infomation);
-    useEffect(() => {}, []);
-    return <>{info}</>;
-  }
 };
 
 export default Tours;
